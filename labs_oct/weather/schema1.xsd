@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="weather.ws.bt.com" xmlns:tns="weather.ws.bt.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="report" type="tns:weatherReport"/>
+
+  <xs:complexType name="weatherReport">
+    <xs:sequence>
+      <xs:element name="weatherDate" type="xs:dateTime"/>
+    </xs:sequence>
+    <xs:attribute name="place" type="xs:string" use="required"/>
+    <xs:attribute name="minTemp" type="xs:float"/>
+    <xs:attribute name="maxTemp" type="xs:float"/>
+  </xs:complexType>
+</xs:schema>
+
